@@ -5,9 +5,9 @@
 #include "numerical_analysis.h"
 
 /*
- * Input: first real (double), second real (double) and the precision (double)
- * Process: the first is compared to the second with precision given.
- * Output: the boolean value.
+ * Input: First real (double), second real (double) and the precision (double)
+ * Process: The first is compared to the second with precision given.
+ * Output: The boolean value.
  */
 int comparison_real (a, b, precision) 
 {
