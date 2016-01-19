@@ -6,9 +6,9 @@
 #define NUMERICAL_ANALYSIS_HEADER
 
 //MACRO
-#define COMPARISON_REAL(a, b, precision) ({(a - b) <= precision;})
+#define COMPARISON_REAL(a, b, p) ({(a - b) <= p;})
 
 //FUNCTIONS
-int comparison_real (double a,double b,double precision);
+int comparison_real (double a,double b,double p);
 
 #endif

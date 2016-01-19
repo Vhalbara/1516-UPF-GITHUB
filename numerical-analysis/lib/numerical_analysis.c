@@ -9,7 +9,7 @@
  * Process: The first is compared to the second with precision given.
  * Output: The boolean value.
  */
-int comparison_real (a, b, precision) 
+int comparison_real (double a,double  b,double  p) 
 {
-	return (a - b) <= precision;
+	return (a - b) <= p;
 }
