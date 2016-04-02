@@ -1,0 +1,128 @@
+body {
+	background-color:black;
+	}
+
+.main, .photo
+	{
+	width:600px;
+	height:300px;
+	overflow:hidden;
+	} 
+
+.main
+	{
+	border-radius:25px;
+	border:2px solid;
+	border-color:white;	
+	margin-left: auto;
+    margin-right: auto;	
+	position:relative;
+	top:200px;
+	}
+
+.photo{
+	display: inline;
+	z-index:5;
+	
+} 
+
+#photo0{
+	position:absolute;
+	left:0px;
+	background-image: url("img/005.jpg");
+}	
+
+#photo1{
+	position:absolute;
+	left:600px;
+	background-image: url("img/006.jpg");
+}	
+
+#photo2{
+	position:absolute;
+	left:1200px;
+	background-image: url("img/007.jpg");
+}	
+
+#photo3{
+	position:absolute;
+	left:-1200px;
+	background-image: url("img/010.jpg");
+}	
+
+#photo4{
+	position:absolute;
+	left:-600px;
+	background-image: url("img/011.jpg");
+}	
+
+.arrow{
+	position:absolute;
+	top:126px;
+	width:48px;
+	height:48px;
+	z-index:10;
+	border-radius:10px;
+	visibility:hidden;
+	opacity: 0.5;
+}
+
+.arrow:hover{
+	opacity: 1;
+}
+
+#left{
+	left:5px;
+	background-image: url("img/arrow1L.png");
+}
+
+#right{
+	right:5px;
+	background-image: url("img/arrow1R.png");	
+	}		
+
+.points{
+	position:relative;
+	margin-left: auto;
+    margin-right: auto;
+	top:270px;
+	z-index:10;
+	width:200px;
+	height:20px;
+}
+
+.dot{
+	display:inline;
+	width:20px;
+	height:20px;
+	border-radius:15px;
+	border:2px solid;
+	border-color:red;	
+	background-color:yellow;
+}
+
+#dot0{
+	position:absolute;
+	left:0%;	
+	opacity: 1;
+}
+#dot1{
+	position:absolute;
+	left:22%;
+	opacity: 0.5;	
+}
+#dot2{
+	position:absolute;
+	left:45%;
+	opacity: 0.5;	
+}
+#dot3{
+	position:absolute;
+	left:68%;
+	opacity: 0.5;	
+}
+#dot4{
+	position:absolute;
+	left:90%;
+	opacity: 0.5;	
+}

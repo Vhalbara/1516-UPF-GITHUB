@@ -1,0 +1,29 @@
+.bouton,#Btous, #Baucun
+{
+float:left;
+text-align:center;
+vertical-align:bottom;
+border-radius:60px;
+height:120px;
+width:120px;
+}
+
+.bouton div,#Btous div, #Baucun div{
+position: relative;
+top: 40%;
+}
+
+.rouge
+{
+background-color:red;
+}
+
+.vert
+{
+background-color:green;
+}
+
+section
+{
+clear:both;
+}

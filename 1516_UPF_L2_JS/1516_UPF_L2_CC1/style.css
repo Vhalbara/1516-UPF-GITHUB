@@ -1,0 +1,33 @@
+
+#conteneur {
+	position: relative;
+	margin-left: auto;
+    margin-right: auto;	
+	width:500px;
+	height:100px;
+	top:100px;
+	}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position:absolute;
+	top: 0;
+	left: 0;
+}
+
+li {
+	display: block;
+	float: left;
+	padding: 5px;
+}
+	
+#blob{
+	background-color: yellow;
+	border-radius:10px;
+	position: absolute;
+	border:2px solid blue;
+	}
+	
+	

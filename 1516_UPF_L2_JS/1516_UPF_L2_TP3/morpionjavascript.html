@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Morpion</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script LANGUAGE="Javascript1.2">
+function init()
+{
+joueur="x";//flag du joueur qui doit jouer
+coups=0;//flag pour le nbre maximum de coups
+fini=false;//jeu fini
+document.form1.texte.value="Joueur X jouez...";
+for (i=0;i<9;i++)
+	{
+	document.images[i].src="img/gris.gif";
+	document.images[i].name="vide";
+	}
+}
+</script>
+<script LANGUAGE="Javascript1.2">
+function jeu(x,y)
+{
+if (fini) 
+	{
+	if (confirm("Le jeu est fini, Voulez vous recommencez!!!")) init();
+	}
+else
+	if (document.images[3*x+y].name=="vide") //si la case n'a pas été jouée (name==vide)
+		{
+		coups++;//alert(coups);
+		document.images[3*x+y].src="img/"+joueur+".gif"; //affiche le symbole du joueur
+		document.images[3*x+y].name=joueur; //change le nom de l'image
+		//teste si le joueur a gagné
+		if (
+		((document.images[0].name==joueur)&&(document.images[1].name==joueur)&&(document.images[2].name==joueur))||
+		((document.images[3].name==joueur)&&(document.images[4].name==joueur)&&(document.images[5].name==joueur))||
+		((document.images[6].name==joueur)&&(document.images[7].name==joueur)&&(document.images[8].name==joueur))||
+		((document.images[0].name==joueur)&&(document.images[3].name==joueur)&&(document.images[6].name==joueur))||
+		((document.images[1].name==joueur)&&(document.images[4].name==joueur)&&(document.images[7].name==joueur))||
+		((document.images[2].name==joueur)&&(document.images[5].name==joueur)&&(document.images[8].name==joueur))||
+		((document.images[0].name==joueur)&&(document.images[4].name==joueur)&&(document.images[8].name==joueur))||
+		((document.images[2].name==joueur)&&(document.images[4].name==joueur)&&(document.images[6].name==joueur))
+		)
+			{
+			if (confirm("BRAVO, Le Joueur "+joueur+" a gagne... Voulez vous recommencer??")) init();
+			else fini=true;
+			}
+		else //sinon change le joueur
+			if (coups==9) 
+				{
+				if (confirm("Plus de cases de libres, Le jeu est fini, Voulez vous recommencer!!!")) init();
+				else fini=true;
+				}
+			else
+				{
+				if (joueur=="x") joueur="0"; else joueur="x"; //change le joueur
+				document.form1.texte.value="Joueur "+joueur+" jouez..."; //nouvel affichage
+				}
+		}
+	else document.form1.texte.value="Case deja jouee: joueur "+joueur+ " recommencez..."; 
+}
+</script>
+
+</head>
+<body onLoad="init();">
+
+<table width=100%>
+  <tr align=center><th>
+      <h1>Jeu du MORPION</H1> 
+  </table>
+  <p align=justify>&nbsp;
+<form name="form1">
+  <table align="center">
+<tr><td><img src="" border="2" align="absmiddle" width="30" height="30" onClick="jeu(0,0)" name="vide"><td><img src="" border="2" align="absmiddle" width="30" height="30" onClick="jeu(0,1)" name="vide"><td><img src="" border="2" align="absmiddle" width="30" height="30" onClick="jeu(0,2)" name="vide">
+<tr><td><img src="" border="2" align="absmiddle" width="30" height="30" onClick="jeu(1,0)" name="vide"><td><img src="" border="2" align="absmiddle" width="30" height="30" onClick="jeu(1,1)" name="vide"><td><img src="" border="2" align="absmiddle" width="30" height="30" onClick="jeu(1,2)" name="vide">
+<tr><td><img src="" border="2" align="absmiddle" width="30" height="30" onClick="jeu(2,0)" name="vide"><td><img src="" border="2" align="absmiddle" width="30" height="30" onClick="jeu(2,1)" name="vide"><td><img src="" border="2" align="absmiddle" width="30" height="30" onClick="jeu(2,2)" name="vide">
+  </table>
+  <center><input type="text" Value="Joueur X jouez..." name="texte"></center>
+    <center><input type="reset" value="Rejouer..." onClick="init();"></center>
+  </form>
+<p>&nbsp;</p>
+</body>
+</html>

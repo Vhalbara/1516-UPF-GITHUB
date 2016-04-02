@@ -1,0 +1,26 @@
+div, img, .grille{
+	margin-left: auto;
+    margin-right: auto;	
+}
+
+.grille{display:block;}
+
+.imagette{
+}
+.texte{
+	display:block;
+	border-radius:50px;
+	border:2px solid;
+	background-color:grey;
+	width:250px;
+	text-align:center;
+}
+
+h3{
+	margin-bottom:0px;
+}
+
+.main{
+	display:block;
+	width:70%;
+	}
